@@ -1,3 +1,13 @@
+/* 
+Operator	Name	Description	Example	Try it
++	Addition	Adds together two values	x + y	
+-	Subtraction	Subtracts one value from another	x - y	
+*	Multiplication	Multiplies two values	x * y	
+/	Division	Divides one value by another	x / y	
+%	Modulus	Returns the division remainder	x % y	
+++	Increment	Increases the value of a variable by 1	++x	
+--	Decrement	Decreases the value of a variable by 1	--x*/
+
 #include<iostream>
 using namespace std;
 int main() {
@@ -15,13 +25,13 @@ int main() {
     c= a%b;
     cout<<"Remainder of a and b is : \n"<<c<<endl;
     c= a++;
-    cout<<"Increment of a and b is : \n"<<c<<endl;
+    cout<<"Increment of a  is : \n"<<c<<endl;
     c=b++;
-    cout<<"Increment  of a and b is : \n"<<c<<endl;
+    cout<<"Increment  of  b is : \n"<<c<<endl;
     c= --a;
-    cout<<"Decrement of a and b is : \n"<<c<<endl;
+    cout<<"Decrement of a  is : \n"<<c<<endl;
     c= --b;
-    cout<<"Decrement of a and b is : \n"<<c<<endl;
+    cout<<"Decrement of b is : \n"<<c<<endl;
 
     return 0;
 }
