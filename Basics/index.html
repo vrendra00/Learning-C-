@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience & Opportunity Bar</title>
+  <style>
+    body {
+      background-color: #87CEEB; /* light blue */
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    .bar-container {
+      display: flex;
+      border: 2px solid black;
+      margin-bottom: 30px;
+    }
+
+    .month {
+      width: 60px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid black;
+      font-weight: bold;
+    }
+
+    .month:last-child {
+      border-right: none;
+    }
+
+    .experience {
+      background-color: #cc6633; /* brown-orange for experience */
+    }
+
+    .opportunity {
+      background-color: #ffdd75; /* yellowish for opportunity */
+    }
+
+    .legend {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .color-box {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      border: 1px solid black;
+    }
+
+    .bike {
+      position: absolute;
+      top: 85px;
+      left: calc(60px * 4 + 10px); /* place it on May */
+      animation: ride 3s infinite alternate;
+    }
+
+    .bike::before {
+      content: "🚴";
+      font-size: 30px;
+    }
+
+    @keyframes ride {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar-container">
+    <div class="month experience">JAN</div>
+    <div class="month experience">FEB</div>
+    <div class="month experience">MAR</div>
+    <div class="month experience">APR</div>
+    <div class="month opportunity">MAY</div>
+    <div class="month opportunity">JUN</div>
+    <div class="month opportunity">JUL</div>
+    <div class="month opportunity">AUG</div>
+    <div class="month opportunity">SEP</div>
+    <div class="month opportunity">OCT</div>
+    <div class="month opportunity">NOV</div>
+    <div class="month opportunity">DEC</div>
+  </div>
+
+  <div class="bike"></div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="color-box" style="background-color: #cc6633;"></div>
+      EXPERIENCE
+    </div>
+    <div class="legend-item">
+      <div class="color-box" style="background-color: #ffdd75;"></div>
+      OPPORTUNITY
+    </div>
+  </div>
+</body>
+</html>
